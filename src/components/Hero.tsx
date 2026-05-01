@@ -183,7 +183,7 @@ export const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Button asChild size="lg" className="rounded-full px-8 h-12 bg-gradient-to-r from-primary via-purple-500 to-cyan-500 text-white font-bold hover:scale-105 transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] border-0">
-              <Link href={'https://drive.google.com/drive/folders/1VNP38m2F3t1nsBfLxWulkN4T77p99_UZ'} target="_blank" rel="noopener noreferrer">
+              <Link href={'https://drive.google.com/file/d/18xoX_1_2lhDBZxvzxUFLIRZk-zVy9Fu_/view'} target="_blank" rel="noopener noreferrer">
                  Download Resume <Download className="ml-2 h-5 w-5" />
               </Link>
             </Button>
