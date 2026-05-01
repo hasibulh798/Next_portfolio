@@ -34,8 +34,8 @@ export const Education = () => {
             {EDUCATION.map((edu, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
                 className={`relative flex items-center justify-between w-full ${
@@ -50,8 +50,8 @@ export const Education = () => {
                   className="absolute left-4 md:left-1/2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background -translate-x-1/2 z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]" 
                 />
 
-                <div className="w-full md:w-[45%] pl-12 md:pl-0">
-                  <div className="bg-card/40 backdrop-blur-sm border border-border rounded-3xl p-8 hover:bg-card hover:border-primary/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] transition-all duration-500 shadow-xl group">
+                <div className="w-full md:w-[45%] pl-10 md:pl-0">
+                  <div className="bg-card/40 backdrop-blur-sm border border-border rounded-2xl md:rounded-3xl p-6 md:p-8 hover:bg-card hover:border-primary/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] transition-all duration-500 shadow-xl group">
                     <span className="text-primary font-bold text-sm mb-2 block group-hover:translate-x-1 transition-transform">{edu.period}</span>
                     <h4 className="text-xl font-bold mb-1 text-foreground group-hover:text-primary transition-colors">{edu.degree}</h4>
                     <p className="text-foreground/70 font-semibold mb-4">{edu.institution}</p>

@@ -32,7 +32,7 @@ export const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="group relative grid md:grid-cols-2 gap-8 items-center bg-card/40 backdrop-blur-md border border-border rounded-[2.5rem] p-6 md:p-10 hover:border-primary/50 hover:shadow-[0_0_50px_rgba(59,130,246,0.2)] dark:hover:shadow-[0_0_60px_rgba(59,130,246,0.25)] transition-all duration-500 shadow-2xl"
+              className="group relative grid md:grid-cols-2 gap-8 items-center bg-card/40 backdrop-blur-md border border-border rounded-3xl md:rounded-[2.5rem] p-6 md:p-10 hover:border-primary/50 hover:shadow-[0_0_50px_rgba(59,130,246,0.2)] dark:hover:shadow-[0_0_60px_rgba(59,130,246,0.25)] transition-all duration-500 shadow-2xl"
             >
               <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl">
                 <img

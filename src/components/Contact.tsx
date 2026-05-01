@@ -56,8 +56,8 @@ export const Contact = () => {
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             <h4 className="text-2xl font-bold mb-6 text-foreground">Contact Information</h4>
@@ -91,10 +91,10 @@ export const Contact = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-card/40 border border-border rounded-[2.5rem] p-8 md:p-10 shadow-2xl backdrop-blur-md relative overflow-hidden"
+            className="bg-card/40 border border-border rounded-3xl md:rounded-[2.5rem] p-6 md:p-10 shadow-2xl backdrop-blur-md relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl -mr-16 -mt-16" />
             
