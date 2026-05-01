@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { AnimatedSquaresBg } from "./AnimatedSquaresBg";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -32,7 +33,8 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-gradient-to-br from-green-100 via-emerald-50 to-teal-100 dark:bg-none dark:bg-transparent">
+    <section id="contact" className="py-24 relative overflow-hidden bg-slate-50/30 dark:bg-transparent">
+      <AnimatedSquaresBg />
       {/* --- CONTACT SPECIFIC ANIMATED BACKGROUND --- */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <motion.div 

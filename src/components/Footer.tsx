@@ -1,7 +1,10 @@
+import { AnimatedSquaresBg } from "./AnimatedSquaresBg";
+
 export const Footer = () => {
   return (
-    <footer className="py-12 border-t border-border bg-gradient-to-br from-teal-100 to-cyan-100 dark:bg-none dark:bg-transparent">
-      <div className="container mx-auto px-6">
+    <footer className="py-12 border-t border-border relative overflow-hidden bg-slate-50/30 dark:bg-transparent">
+      <AnimatedSquaresBg />
+      <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-xl font-bold tracking-tighter">
             HASIB<span className="text-primary">.</span>

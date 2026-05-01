@@ -15,6 +15,7 @@ import {
   Layout,
   Server
 } from "lucide-react";
+import { AnimatedSquaresBg } from "./AnimatedSquaresBg";
 
 const skillCategories = [
   {
@@ -103,7 +104,8 @@ const SkillBar = ({ name, level, icon }: { name: string; level: number; icon: Re
 
 export const Skills = () => {
   return (
-    <section id="skills" className="py-24 relative overflow-hidden bg-gradient-to-br from-pink-100 via-rose-50 to-orange-100 dark:bg-none dark:bg-transparent">
+    <section id="skills" className="py-24 relative overflow-hidden bg-slate-50/30 dark:bg-transparent">
+      <AnimatedSquaresBg />
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <motion.h2 

@@ -5,10 +5,12 @@ import { PROJECTS } from "@/lib/constants";
 import { ExternalLink, Code, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { AnimatedSquaresBg } from "./AnimatedSquaresBg";
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-24 relative overflow-hidden bg-gradient-to-br from-orange-100 via-amber-50 to-yellow-100 dark:bg-none dark:bg-transparent">
+    <section id="projects" className="py-24 relative overflow-hidden bg-slate-50/30 dark:bg-transparent">
+      <AnimatedSquaresBg />
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>

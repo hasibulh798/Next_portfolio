@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Sparkles, Code2, Briefcase, Heart, Coffee, Globe, Trophy, Timer } from "lucide-react";
+import { AnimatedSquaresBg } from "./AnimatedSquaresBg";
 
 const stats = [
   { label: "Projects Completed", value: "20+", icon: <Trophy className="w-4 h-4" /> },
@@ -42,7 +43,8 @@ const journeyCards = [
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 relative overflow-hidden bg-gradient-to-br from-purple-100 via-fuchsia-50 to-pink-100 dark:bg-none dark:bg-transparent">
+    <section id="about" className="py-24 relative overflow-hidden bg-slate-50/30 dark:bg-transparent">
+      <AnimatedSquaresBg />
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="mb-16">

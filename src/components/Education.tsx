@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import { EDUCATION } from "@/lib/constants";
+import { AnimatedSquaresBg } from "./AnimatedSquaresBg";
 
 export const Education = () => {
   return (
-    <section id="education" className="py-24 relative overflow-hidden bg-gradient-to-br from-yellow-100 via-lime-50 to-green-100 dark:bg-none dark:bg-transparent">
+    <section id="education" className="py-24 relative overflow-hidden bg-slate-50/30 dark:bg-transparent">
+      <AnimatedSquaresBg />
       {/* --- EDUCATION SPECIFIC ANIMATED BACKGROUND --- */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.02)_0%,transparent_70%)]" />
@@ -14,7 +16,7 @@ export const Education = () => {
             opacity: [0.1, 0.2, 0.1],
           }}
           transition={{ duration: 5, repeat: Infinity }}
-          className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-primary/20 to-transparent -translate-x-1/2" 
+          className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-primary/20 to-transparent -translate-x-1/2" 
         />
       </div>
 
@@ -26,7 +28,7 @@ export const Education = () => {
 
         <div className="max-w-4xl mx-auto relative">
           {/* Vertical Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[3px] bg-gradient-to-b from-primary via-purple-500 to-cyan-500 -translate-x-1/2 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.3)]" />
 
           <div className="space-y-12">
             {EDUCATION.map((edu, index) => (
@@ -45,7 +47,7 @@ export const Education = () => {
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.5, type: "spring" }}
-                  className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background -translate-x-1/2 z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]" 
+                  className="absolute left-4 md:left-1/2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background -translate-x-1/2 z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]" 
                 />
 
                 <div className="w-full md:w-[45%] pl-12 md:pl-0">

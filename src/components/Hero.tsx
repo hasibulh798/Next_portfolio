@@ -93,11 +93,10 @@ export const Hero = () => {
               }`} 
             />
             <motion.div 
-              style={{ y: y2, rotate: -heroRotate }}
+              style={{ y: y2, rotate: -heroRotate, animationDelay: '-5s' }}
               className={`absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] blur-[120px] rounded-full transition-colors duration-1000 animate-drift ${
                 isDark ? "bg-purple-500/30" : "bg-purple-400/20"
               }`} 
-              style={{ animationDelay: '-5s' }}
             />
             <motion.div 
               className={`absolute top-[20%] right-[10%] w-[40%] h-[40%] blur-[100px] rounded-full transition-colors duration-1000 animate-drift ${
@@ -208,8 +207,14 @@ export const Hero = () => {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground/40 font-bold">Scroll</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-primary/50 to-transparent" />
+        <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground/60 font-bold mb-1">Scroll</span>
+        <div className="w-5 h-8 border-2 border-muted-foreground/40 rounded-full flex justify-center p-1">
+          <motion.div 
+            animate={{ y: [0, 12, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            className="w-1 h-2 bg-primary rounded-full" 
+          />
+        </div>
       </motion.div>
     </section>
   );

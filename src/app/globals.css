@@ -39,6 +39,25 @@
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
   }
+
+  @keyframes floating-square {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 20%;
+    }
+    100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+    }
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 }
 
 @layer base {
@@ -109,6 +128,16 @@
 
   .animate-drift {
     animation: drift 20s ease-in-out infinite;
+  }
+
+  .animate-floating-square {
+    animation: floating-square 25s linear infinite;
+  }
+
+  .animate-gradient-bg {
+    background: linear-gradient(-45deg, #3b82f6, #a855f7, #06b6d4, #3b82f6);
+    background-size: 300% 300%;
+    animation: gradient-shift 8s ease infinite;
   }
 }
 
