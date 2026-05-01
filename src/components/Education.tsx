@@ -5,7 +5,7 @@ import { EDUCATION } from "@/lib/constants";
 
 export const Education = () => {
   return (
-    <section id="education" className="py-24 relative overflow-hidden">
+    <section id="education" className="py-24 relative overflow-hidden bg-gradient-to-br from-yellow-100 via-lime-50 to-green-100 dark:bg-none dark:bg-transparent">
       {/* --- EDUCATION SPECIFIC ANIMATED BACKGROUND --- */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.02)_0%,transparent_70%)]" />
@@ -21,7 +21,7 @@ export const Education = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-sm uppercase tracking-widest text-primary font-bold mb-4">Background</h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-foreground">Education Journey</h3>
+          <h3 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-400 pb-2">Education Journey</h3>
         </div>
 
         <div className="max-w-4xl mx-auto relative">

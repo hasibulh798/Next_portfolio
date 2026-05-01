@@ -42,7 +42,7 @@ const journeyCards = [
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-24 relative overflow-hidden bg-gradient-to-br from-purple-100 via-fuchsia-50 to-pink-100 dark:bg-none dark:bg-transparent">
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="mb-16">
@@ -57,9 +57,9 @@ export const About = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-foreground"
+            className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 pb-2"
           >
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Me</span>
+            About Me
           </motion.h2>
           <div className="w-full h-px bg-border mt-8" />
         </div>

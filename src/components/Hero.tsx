@@ -21,13 +21,9 @@ const CodeSnippet = ({ delay = 0, x = "0%", y = "0%", code = "" }: CodeSnippetPr
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ 
-        opacity: [0.2, 0.5, 0.2],
-        y: ["-20px", "20px", "-20px"],
-        rotate: [-5, 5, -5]
-      }}
-      transition={{ duration: 6, repeat: Infinity, delay }}
-      className="absolute hidden md:block select-none pointer-events-none"
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1, delay }}
+      className="absolute hidden md:block select-none pointer-events-none animate-drift"
       style={{ left: x, top: y }}
     >
       <div className={`backdrop-blur-xl border rounded-xl p-4 shadow-2xl transition-colors duration-500 ${
@@ -54,13 +50,9 @@ interface SyntaxSymbolProps {
 const SyntaxSymbol = ({ symbol, x, y, delay, rotate = 0 }: SyntaxSymbolProps) => (
   <motion.div
     initial={{ opacity: 0 }}
-    animate={{ 
-      y: [0, -40, 0],
-      opacity: [0.1, 0.3, 0.1],
-      rotate: [rotate, rotate + 20, rotate]
-    }}
-    transition={{ duration: 8, repeat: Infinity, delay, ease: "easeInOut" }}
-    className="absolute text-2xl font-mono text-foreground opacity-20 font-bold pointer-events-none select-none"
+    animate={{ opacity: 0.2 }}
+    transition={{ duration: 1, delay }}
+    className="absolute text-2xl font-mono text-foreground font-bold pointer-events-none select-none animate-drift"
     style={{ left: x, top: y }}
   >
     {symbol}
@@ -87,7 +79,7 @@ export const Hero = () => {
     <section 
       id="home" 
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-gradient-to-br from-blue-100 via-indigo-50 to-purple-100 dark:bg-none dark:bg-transparent"
     >
       {/* --- ANIMATED BACKGROUND LAYER --- */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -96,26 +88,22 @@ export const Hero = () => {
           <>
             <motion.div 
               style={{ y: y1, rotate: heroRotate }}
-              animate={{ scale: [1, 1.2, 1], opacity: isDark ? [0.3, 0.5, 0.3] : [0.1, 0.2, 0.1] }}
-              transition={{ duration: 10, repeat: Infinity }}
-              className={`absolute -top-[10%] -left-[10%] w-[60%] h-[60%] blur-[120px] rounded-full transition-colors duration-1000 ${
+              className={`absolute -top-[10%] -left-[10%] w-[60%] h-[60%] blur-[120px] rounded-full transition-colors duration-1000 animate-drift ${
                 isDark ? "bg-blue-500/30" : "bg-blue-400/20"
               }`} 
             />
             <motion.div 
               style={{ y: y2, rotate: -heroRotate }}
-              animate={{ scale: [1.2, 1, 1.2], opacity: isDark ? [0.2, 0.4, 0.2] : [0.1, 0.15, 0.1] }}
-              transition={{ duration: 12, repeat: Infinity }}
-              className={`absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] blur-[120px] rounded-full transition-colors duration-1000 ${
+              className={`absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] blur-[120px] rounded-full transition-colors duration-1000 animate-drift ${
                 isDark ? "bg-purple-500/30" : "bg-purple-400/20"
               }`} 
+              style={{ animationDelay: '-5s' }}
             />
             <motion.div 
-              animate={{ scale: [1, 1.3, 1], opacity: isDark ? [0.1, 0.2, 0.1] : [0.05, 0.1, 0.05] }}
-              transition={{ duration: 15, repeat: Infinity }}
-              className={`absolute top-[20%] right-[10%] w-[40%] h-[40%] blur-[100px] rounded-full transition-colors duration-1000 ${
+              className={`absolute top-[20%] right-[10%] w-[40%] h-[40%] blur-[100px] rounded-full transition-colors duration-1000 animate-drift ${
                 isDark ? "bg-cyan-500/20" : "bg-cyan-400/15"
               }`} 
+              style={{ animationDelay: '-10s' }}
             />
 
             <SyntaxSymbol symbol="< />" x="15%" y="25%" delay={0} rotate={-10} />

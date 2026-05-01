@@ -8,12 +8,12 @@ import Link from "next/link";
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-24 relative overflow-hidden">
+    <section id="projects" className="py-24 relative overflow-hidden bg-gradient-to-br from-orange-100 via-amber-50 to-yellow-100 dark:bg-none dark:bg-transparent">
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <h2 className="text-sm uppercase tracking-widest text-primary font-bold mb-4">Featured Work</h2>
-            <h3 className="text-3xl md:text-5xl font-bold text-foreground">Creative Projects</h3>
+            <h3 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 pb-2">Creative Projects</h3>
           </div>
           <Button variant="ghost" asChild className="text-muted-foreground hover:text-foreground">
             <Link href="https://github.com/hasibulh798" target="_blank">

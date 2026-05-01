@@ -103,7 +103,7 @@ const SkillBar = ({ name, level, icon }: { name: string; level: number; icon: Re
 
 export const Skills = () => {
   return (
-    <section id="skills" className="py-24 relative overflow-hidden">
+    <section id="skills" className="py-24 relative overflow-hidden bg-gradient-to-br from-pink-100 via-rose-50 to-orange-100 dark:bg-none dark:bg-transparent">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <motion.h2 
@@ -117,7 +117,7 @@ export const Skills = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-bold text-foreground"
+            className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 pb-2"
           >
             Skills & Proficiency
           </motion.h3>

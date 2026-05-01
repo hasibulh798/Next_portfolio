@@ -20,67 +20,33 @@ export const GlobalBackground = () => {
     <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-background transition-colors duration-700">
       {/* Animated Gradient Base - More Vibrant & Colorful */}
       <div className="absolute inset-0 opacity-50">
-        <motion.div
-          animate={{
-            scale: [1, 1.25, 1],
-            x: [0, 100, 0],
-            y: [0, 60, 0],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className={`absolute top-[-25%] left-[-15%] w-[80%] h-[80%] blur-[140px] rounded-full transition-colors duration-1000 ${
+        <div
+          className={`absolute top-[-25%] left-[-15%] w-[80%] h-[80%] blur-[140px] rounded-full transition-colors duration-1000 animate-drift ${
             isDark ? "bg-blue-600/30" : "bg-blue-500/20"
           }`}
+          style={{ animationDuration: '18s' }}
         />
         
-        <motion.div
-          animate={{
-            scale: [1.2, 1, 1.2],
-            x: [0, -100, 0],
-            y: [0, -80, 0],
-          }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className={`absolute bottom-[-20%] right-[-10%] w-[70%] h-[70%] blur-[140px] rounded-full transition-colors duration-1000 ${
+        <div
+          className={`absolute bottom-[-20%] right-[-10%] w-[70%] h-[70%] blur-[140px] rounded-full transition-colors duration-1000 animate-drift ${
             isDark ? "bg-purple-600/30" : "bg-purple-500/20"
           }`}
+          style={{ animationDuration: '22s', animationDelay: '-5s' }}
         />
 
-        <motion.div
-          animate={{
-            scale: [1, 1.4, 1],
-            opacity: [0.15, 0.4, 0.15],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className={`absolute top-[15%] right-[5%] w-[60%] h-[60%] blur-[120px] rounded-full transition-colors duration-1000 ${
+        <div
+          className={`absolute top-[15%] right-[5%] w-[60%] h-[60%] blur-[120px] rounded-full transition-colors duration-1000 animate-drift ${
             isDark ? "bg-cyan-600/20" : "bg-cyan-500/15"
           }`}
+          style={{ animationDuration: '20s', animationDelay: '-10s' }}
         />
         
         {/* Extra Glow Blob for Color Variety */}
-        <motion.div
-          animate={{
-            scale: [1.3, 1, 1.3],
-            x: [-50, 50, -50],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className={`absolute top-[40%] left-[30%] w-[40%] h-[40%] blur-[150px] rounded-full transition-colors duration-1000 ${
+        <div
+          className={`absolute top-[40%] left-[30%] w-[40%] h-[40%] blur-[150px] rounded-full transition-colors duration-1000 animate-drift ${
             isDark ? "bg-emerald-600/10" : "bg-emerald-500/10"
           }`}
+          style={{ animationDuration: '25s', animationDelay: '-15s' }}
         />
       </div>
 

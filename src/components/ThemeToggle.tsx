@@ -21,7 +21,7 @@ export const ThemeToggle = () => {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="rounded-full w-10 h-10 bg-white/5 border border-white/10 hover:bg-white/10 relative overflow-hidden"
+      className="rounded-full w-10 h-10 bg-foreground/5 border border-foreground/10 hover:bg-foreground/10 relative overflow-hidden"
     >
       <AnimatePresence mode="wait">
         {theme === "dark" ? (

@@ -32,7 +32,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-white/[0.01]">
+    <section id="contact" className="py-24 relative overflow-hidden bg-gradient-to-br from-green-100 via-emerald-50 to-teal-100 dark:bg-none dark:bg-transparent">
       {/* --- CONTACT SPECIFIC ANIMATED BACKGROUND --- */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <motion.div 
@@ -49,7 +49,7 @@ export const Contact = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-sm uppercase tracking-widest text-primary font-semibold mb-4">Get in Touch</h2>
-          <h3 className="text-3xl md:text-5xl font-bold">Let&apos;s Build Together</h3>
+          <h3 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400 pb-2">Let&apos;s Build Together</h3>
         </div>
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
@@ -92,7 +92,7 @@ export const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white/[0.02] border border-white/5 rounded-[2.5rem] p-8 md:p-10 shadow-2xl backdrop-blur-md relative overflow-hidden"
+            className="bg-card/40 border border-border rounded-[2.5rem] p-8 md:p-10 shadow-2xl backdrop-blur-md relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl -mr-16 -mt-16" />
             
