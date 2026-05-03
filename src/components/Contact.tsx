@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, Globe, Send, MessageSquare, Code } from "lucide-react";
-import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaWhatsapp, FaGithub } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -68,10 +68,10 @@ export const Contact = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { icon: <Mail size={24} />, label: "Email", value: "hello@hasib.dev", href: "mailto:hello@hasib.dev", color: "bg-primary/20", text: "text-primary" },
-                { icon: <Code size={24} />, label: "GitHub", value: "hasibulh798", href: "https://github.com/hasibulh798", color: "bg-secondary/20", text: "text-secondary" },
-                { icon: <FaLinkedin size={24} />, label: "LinkedIn", value: "Hasibul Hasan", href: "https://linkedin.com/in/hasibulh798", color: "bg-blue-500/20", text: "text-blue-500" },
-                { icon: <FaWhatsapp size={24} />, label: "WhatsApp", value: "+880 123 456 789", href: "https://wa.me/880123456789", color: "bg-green-500/20", text: "text-green-500" },
+                { icon: <Mail size={24} />, label: "Email", value: "hasibulh798", href: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJTGnQHTqZWTbBtrjwlnQfjcbvjpcKpXGLdkLdxzfWDqXKknwPqTpvxxwPNqfqLjKnqNdxV", color: "bg-primary/20", text: "text-primary" },
+                { icon: <FaGithub size={24} />, label: "GitHub", value: "hasibulh798", href: "https://github.com/hasibulh798", color: "bg-black-500/20", text: "text-black" },
+                { icon: <FaLinkedin size={24} />, label: "LinkedIn", value: "Hasibul Hasan", href: "https://www.linkedin.com/in/hasibul-hasan-b90a84309/", color: "bg-blue-500/20", text: "text-blue-500" },
+                { icon: <FaWhatsapp size={24} />, label: "WhatsApp", value: "+880 156 8725786", href: "https://wa.me/8801568725786", color: "bg-green-500/20", text: "text-green-500" },
               ].map((item, i) => (
                 <motion.div 
                   key={i}

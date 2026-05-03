@@ -13,8 +13,32 @@ import {
   Zap, 
   Container,
   Layout,
-  Server
+  Server,
+  ShieldCheck
 } from "lucide-react";
+import { 
+  SiReact, 
+  SiNextdotjs, 
+  SiTailwindcss, 
+  SiShadcnui, 
+  SiNodedotjs, 
+  SiExpress, 
+  SiMongodb, 
+  SiPrisma, 
+  SiReactquery, 
+  SiZod, 
+  SiGit, 
+  SiGithub, 
+  SiPostman, 
+  SiNpm,
+  SiFramer,
+  SiGo,
+  SiMysql,
+  SiJsonwebtokens,
+  SiVercel,
+  SiRailway,
+  SiPostgresql
+} from "react-icons/si";
 import { AnimatedSquaresBg } from "./AnimatedSquaresBg";
 
 const skillCategories = [
@@ -23,10 +47,11 @@ const skillCategories = [
     icon: <Layout className="w-6 h-6" />,
     color: "blue",
     skills: [
-      { name: "React", level: 90, icon: <Code2 className="w-4 h-4" /> },
-      { name: "Next.js", level: 85, icon: <Zap className="w-4 h-4" /> },
-      { name: "Tailwind CSS", level: 90, icon: <Layers className="w-4 h-4" /> },
-      { name: "Shadcn UI", level: 80, icon: <Layout className="w-4 h-4" /> },
+      { name: "React", level: 90, icon: <SiReact className="w-5 h-5 text-[#61DAFB]" /> },
+      { name: "Next.js", level: 85, icon: <SiNextdotjs className="w-5 h-5 text-black dark:text-white" /> },
+      { name: "Tailwind CSS", level: 90, icon: <SiTailwindcss className="w-5 h-5 text-[#06B6D4]" /> },
+      { name: "Shadcn UI", level: 80, icon: <SiShadcnui className="w-5 h-5 text-black dark:text-white" /> },
+      { name: "Framer Motion", level: 85, icon: <SiFramer className="w-5 h-5 text-black dark:text-white" /> },
     ],
   },
   {
@@ -34,8 +59,9 @@ const skillCategories = [
     icon: <Server className="w-6 h-6" />,
     color: "purple",
     skills: [
-      { name: "Node.js", level: 85, icon: <Settings className="w-4 h-4" /> },
-      { name: "Express.js", level: 80, icon: <Terminal className="w-4 h-4" /> },
+      { name: "Node.js", level: 85, icon: <SiNodedotjs className="w-5 h-5 text-[#339933]" /> },
+      { name: "Express.js", level: 80, icon: <SiExpress className="w-5 h-5 text-black dark:text-white" /> },
+      { name: "Go", level: 70, icon: <SiGo className="w-5 h-5 text-[#00ADD8]" /> },
     ],
   },
   {
@@ -43,8 +69,10 @@ const skillCategories = [
     icon: <Database className="w-6 h-6" />,
     color: "emerald",
     skills: [
-      { name: "MongoDB", level: 85, icon: <Database className="w-4 h-4" /> },
-      { name: "Prisma", level: 75, icon: <Workflow className="w-4 h-4" /> },
+      { name: "MongoDB", level: 85, icon: <SiMongodb className="w-5 h-5 text-[#47A248]" /> },
+      { name: "PostgreSQL", level: 80, icon: <SiPostgresql className="w-5 h-5 text-[#4169E1]" /> },
+      { name: "Prisma", level: 75, icon: <SiPrisma className="w-5 h-5 text-[#2D3748] dark:text-white" /> },
+      { name: "MySQL", level: 80, icon: <SiMysql className="w-5 h-5 text-[#4479A1]" /> },
     ],
   },
   {
@@ -52,16 +80,18 @@ const skillCategories = [
     icon: <Globe className="w-6 h-6" />,
     color: "cyan",
     skills: [
-      { name: "TanStack Query", level: 80, icon: <Zap className="w-4 h-4" /> },
-      { name: "REST API", level: 90, icon: <Globe className="w-4 h-4" /> },
+      { name: "TanStack Query", level: 80, icon: <SiReactquery className="w-5 h-5 text-[#FF4154]" /> },
+      { name: "REST API", level: 90, icon: <Globe className="w-5 h-5 text-blue-500" /> },
     ],
   },
   {
-    title: "Validation",
+    title: "Validation & Auth",
     icon: <CheckCircle2 className="w-6 h-6" />,
     color: "orange",
     skills: [
-      { name: "Zod", level: 75, icon: <CheckCircle2 className="w-4 h-4" /> },
+      { name: "Zod", level: 75, icon: <SiZod className="w-5 h-5 text-[#3E67B1]" /> },
+      { name: "JWT", level: 85, icon: <SiJsonwebtokens className="w-5 h-5 text-black dark:text-white" /> },
+      { name: "Better Auth", level: 80, icon: <ShieldCheck className="w-5 h-5 text-orange-500" /> },
     ],
   },
   {
@@ -69,10 +99,12 @@ const skillCategories = [
     icon: <Settings className="w-6 h-6" />,
     color: "slate",
     skills: [
-      { name: "Git", level: 85, icon: <Workflow className="w-4 h-4" /> },
-      { name: "GitHub", level: 90, icon: <Code2 className="w-4 h-4" /> },
-      { name: "Postman", level: 80, icon: <Globe className="w-4 h-4" /> },
-      { name: "npm", level: 90, icon: <Container className="w-4 h-4" /> },
+      { name: "Git", level: 85, icon: <SiGit className="w-5 h-5 text-[#F05032]" /> },
+      { name: "GitHub", level: 90, icon: <SiGithub className="w-5 h-5 text-black dark:text-white" /> },
+      { name: "Postman", level: 80, icon: <SiPostman className="w-5 h-5 text-[#FF6C37]" /> },
+      { name: "npm", level: 90, icon: <SiNpm className="w-5 h-5 text-[#CB3837]" /> },
+      { name: "Vercel", level: 85, icon: <SiVercel className="w-5 h-5 text-black dark:text-white" /> },
+      { name: "Railway", level: 80, icon: <SiRailway className="w-5 h-5 text-black dark:text-white" /> },
     ],
   },
 ];
@@ -82,7 +114,7 @@ const SkillBar = ({ name, level, icon }: { name: string; level: number; icon: Re
     <div className="mb-6 last:mb-0">
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
-          <span className="text-primary/80">{icon}</span>
+          <span className="flex items-center justify-center drop-shadow-sm">{icon}</span>
           <span className="text-sm font-bold text-foreground/80">{name}</span>
         </div>
         <span className="text-xs font-extrabold text-primary">{level}%</span>
